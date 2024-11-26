@@ -34,6 +34,7 @@ print("93" + str(39))  # str() - rzutowanie na str, 9339
 # nazwa powinna podpowiadać co przechowuje
 
 # typowanie dynamiczne
+# można w każdej chwili wrzucić inny typ danych do zmiennej
 name = "Radek"
 print(name)
 print(type(name))  # <class 'str'>
@@ -44,7 +45,7 @@ print(type(name))
 # tylko podpowiedz typu dla programisty  i pycharm
 name: str = "Tomek"
 print(name)
-name = 90
+name = 90 # pycharm nas ostrzega, program nadal działa
 print(name)
 # Tomek
 # 90
