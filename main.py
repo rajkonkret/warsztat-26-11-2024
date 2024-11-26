@@ -16,3 +16,7 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 # (.venv) PS C:\Users\CSComarch\PycharmProjects\warsztat-26-11-2024> python.exe .\main.py
 # Hi, PyCharm
+# 2 x shift - podręczna wyszukiwarka w pycharm
+# wheel - zmiana wielkości liter kółkiem myszy
+# theme - skórki, kolorki
+# ctrl alt l- formatuje kod wg zasad PEP8
