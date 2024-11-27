@@ -40,7 +40,7 @@ def plik(arg):
         return odczyt
 
 
-fh = open('test.txt', 'w')
+fh = open('../test.txt', 'w')
 fh.write("Zapisano\n")
 fh.close()
 
