@@ -1,6 +1,8 @@
 # lambda - skrócony zapis funkcji
 # lambda ma return
 # funkcja anonimowa - możliwośc uzycia funkcji w miejscu deklaracji
+from functools import reduce, lru_cache
+
 
 def liczymy(x, y):
     return x * y
@@ -101,3 +103,43 @@ print(max(lata, key=lambda c: c[1]))  # (2001, 33.12)
 print(max(map(lambda c: (c[1], c), lata)))  # (33.12, (2001, 33.12))
 print(max(map(lambda c: c[1], lata)))  # 33.12
 print(max(map(lambda c: (c[1], c[0]), lata)))  # (33.12, 2001)
+
+# reduce()
+
+liczby = [1, 2, 3, 4, 5]
+wynik = reduce(lambda a, b: a + b, liczby)  # ((((1+2)+3)+4)+5)
+"""
+   reduce(function, iterable[, initial]) -> value
+
+   Apply a function of two arguments cumulatively to the items of a sequence
+   or iterable, from left to right, so as to reduce the iterable to a single
+   value.  For example, reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates
+   ((((1+2)+3)+4)+5).  If initial is present, it is placed before the items
+   of the iterable in the calculation, and serves as a default when the
+   iterable is empty.
+"""
+print(wynik)  # 15
+wynik_mnozenie = reduce(lambda a, b: a * b, liczby)
+print("Wnik mnożenia reduce()", wynik_mnozenie)  # Wnik mnożenia reduce() 120
+
+
+# ((((1*2)*3)*4)*5)
+
+@lru_cache(maxsize=1000)
+def fib_cached(n):
+    if n < 2:
+        return n
+    return fib_cached(n - 1) + fib_cached(n - 2)
+
+
+print(fib_cached(10))
+print(fib_cached.cache_info())
+# CacheInfo(hits=8, misses=11, maxsize=1000, currsize=11)
+print(fib_cached(5))
+print(fib_cached.cache_info())
+# CacheInfo(hits=9, misses=11, maxsize=1000, currsize=11)
+# hits - ile razy uzyskał wynik nie musząć wykonąć obliczeń
+# misses - ile razy wykonywał obliczenia
+fib_cached.cache_clear()
+print(fib_cached.cache_info())
+# CacheInfo(hits=0, misses=0, maxsize=1000, currsize=0)
