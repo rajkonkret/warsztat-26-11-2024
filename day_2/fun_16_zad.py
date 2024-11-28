@@ -44,7 +44,7 @@ stworz_raport(pr_dane)
 # test Tabnine
 print("Koniec programu")
 print("Raport został wygenerowany")
-for _ in range(1000000):
+for _ in range(1000000):  # _ niema zmienna
     suma = sum(range(1000000))
     if suma == 500000500000:
         break
