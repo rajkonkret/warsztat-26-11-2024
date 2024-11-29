@@ -119,4 +119,5 @@ spam %= 1    spam = spam % 1
 
 https://www.hackerrank.com/domains/python
 https://pl.altapps.net/soft/hackerrank-com
-
+ pip freeze > requirements.txt
+pip install -r .\requirements.tx
