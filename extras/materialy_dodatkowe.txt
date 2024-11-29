@@ -120,4 +120,3 @@ spam %= 1    spam = spam % 1
 https://www.hackerrank.com/domains/python
 https://pl.altapps.net/soft/hackerrank-com
 
-https://docs.google.com/document/d/11fR5wIPhHwwWFgyTSc6qf5fa4UjaJBia/edit?usp=sharing&ouid=104571633204437814844&rtpof=true&sd=true
