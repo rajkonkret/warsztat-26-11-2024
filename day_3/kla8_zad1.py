@@ -55,10 +55,11 @@ class Library:
 
 biblioteka = Library()
 while True:
-    if os.name == "nt":
-        os.system("cls")
-    else:
-        os.system("clear")
+    # print("\033[2J\033[H", end="")
+    # if os.name == "nt":
+    #     os.system("cls")
+    # else:
+    #     os.system("clear")
 
     print(f"""
     1. Dodaj książkę
