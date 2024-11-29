@@ -1,5 +1,7 @@
 # stworzenie ksiazki telefonicznej z wykorzystanie petli while True
 # dodaj kontakt, usun kontakt, wyszukaj kontakt, wyswietl kontakty
+import os
+
 
 # -----------
 # stworzyc system zarzadzania biblioteką klasa Book
@@ -53,6 +55,11 @@ class Library:
 
 biblioteka = Library()
 while True:
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
     print(f"""
     1. Dodaj książkę
     2. Wypożycz książkę
